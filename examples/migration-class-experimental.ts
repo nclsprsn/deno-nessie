@@ -1,5 +1,5 @@
-import type { Info } from "https://deno.land/x/nessie/mod.ts";
-import { AbstractMigration } from "https://deno.land/x/nessie/wrappers/AbstractMigration.ts";
+import type { Info } from "https://github.com/nclsprsn/deno-nessie/raw/master/mod.ts";
+import { AbstractMigration } from "https://github.com/nclsprsn/deno-nessie/raw/master/wrappers/AbstractMigration.ts";
 import type { Client } from "https://deno.land/x/postgres@v0.4.5/mod.ts";
 import Dex from "https://deno.land/x/dex/mod.ts";
 

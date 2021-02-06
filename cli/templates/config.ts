@@ -3,7 +3,7 @@ import {
   ClientOptions,
   ClientPostgreSQL,
   ClientSQLite,
-} from "https://deno.land/x/nessie/mod.ts";
+} from "https://github.com/nclsprsn/deno-nessie/raw/master/mod.ts";
 
 /** These are the default config options. */
 const clientOptions: ClientOptions = {

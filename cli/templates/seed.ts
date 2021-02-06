@@ -1,5 +1,5 @@
-import { Seed } from "https://deno.land/x/nessie/mod.ts";
-import { Schema } from "https://deno.land/x/nessie/qb.ts";
+import { Seed } from "https://github.com/nclsprsn/deno-nessie/raw/master/mod.ts";
+import { Schema } from "https://github.com/nclsprsn/deno-nessie/raw/master/qb.ts";
 import Dex from "https://deno.land/x/dex/mod.ts";
 
 /** Runs on seed */

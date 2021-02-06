@@ -79,7 +79,7 @@ export class State {
     await Deno.mkdir(this.client!.migrationFolder, { recursive: true });
 
     const responseFile = await fetch(
-      "https://deno.land/x/nessie/cli/templates/migration.ts",
+      "https://github.com/nclsprsn/deno-nessie/raw/master/cli/templates/migration.ts",
     );
 
     await Deno.writeTextFile(
@@ -104,7 +104,7 @@ export class State {
     await Deno.mkdir(this.client!.seedFolder, { recursive: true });
 
     const responseFile = await fetch(
-      "https://deno.land/x/nessie/cli/templates/seed.ts",
+      "https://github.com/nclsprsn/deno-nessie/raw/master/cli/templates/seed.ts",
     );
 
     await Deno.writeTextFile(

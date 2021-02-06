@@ -39,7 +39,7 @@ const initDenomander = () => {
 /** Initializes Nessie */
 const initNessie = async () => {
   const responseFile = await fetch(
-    "https://deno.land/x/nessie/cli/templates/config.ts",
+    "https://github.com/nclsprsn/deno-nessie/raw/master/cli/templates/config.ts",
   );
 
   await Deno.writeTextFile(

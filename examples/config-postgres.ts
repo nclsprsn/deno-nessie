@@ -1,7 +1,7 @@
 import {
   ClientOptions,
   ClientPostgreSQL,
-} from "https://deno.land/x/nessie/mod.ts";
+} from "https://github.com/nclsprsn/deno-nessie/raw/master/mod.ts";
 import type { ConnectionOptions } from "https://deno.land/x/postgres@v0.4.5/connection_params.ts";
 
 const clientConfig: ClientOptions = {

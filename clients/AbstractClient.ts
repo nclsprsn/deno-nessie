@@ -199,7 +199,7 @@ export abstract class AbstractClient<Client> {
     };
 
     if (this.exposeQueryBuilder) {
-      const { Schema } = await import("https://deno.land/x/nessie/qb.ts");
+      const { Schema } = await import("https://github.com/nclsprsn/deno-nessie/raw/master/qb.ts");
       exposedObject.queryBuilder = new Schema(this.dialect);
     }
 

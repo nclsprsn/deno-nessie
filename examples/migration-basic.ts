@@ -1,5 +1,5 @@
-import type { Migration } from "https://deno.land/x/nessie/mod.ts";
-import { Schema } from "https://deno.land/x/nessie/qb.ts";
+import type { Migration } from "https://github.com/nclsprsn/deno-nessie/raw/master/mod.ts";
+import { Schema } from "https://github.com/nclsprsn/deno-nessie/raw/master/qb.ts";
 
 export const up: Migration = ({ dialect }) => {
   const schema = new Schema(dialect);

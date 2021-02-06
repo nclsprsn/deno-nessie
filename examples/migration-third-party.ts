@@ -1,4 +1,4 @@
-import type { Migration } from "https://deno.land/x/nessie/mod.ts";
+import type { Migration } from "https://github.com/nclsprsn/deno-nessie/raw/master/mod.ts";
 import Dex from "https://deno.land/x/dex/mod.ts";
 
 export const up: Migration = ({ dialect }) => { // The dialect depends on which client you use in the config file
