@@ -203,6 +203,8 @@ export abstract class AbstractClient<Client> {
       exposedObject.queryBuilder = new Schema(this.dialect);
     }
 
+    let query: string[] | string = [];
+
     if (this.experimental) {
       const MigrationClass: new (
         props: AbstractMigrationProps<Client>,
@@ -226,24 +228,22 @@ export abstract class AbstractClient<Client> {
         fileName,
       ));
 
-      let query: string | string[];
-
       if (isDown) {
         query = await down(exposedObject);
       } else {
         query = await up(exposedObject);
       }
-
-      if (!query) query = [];
-      else if (typeof query === "string") query = [query];
-
-      if (isDown) {
-        query.push(this.QUERY_MIGRATION_DELETE(fileName));
-      } else {
-        query.push(this.QUERY_MIGRATION_INSERT(fileName));
-      }
-
-      await queryHandler(query);
     }
+
+    if (!query) query = [];
+    else if (typeof query === "string") query = [query];
+
+    if (isDown) {
+      query.push(this.QUERY_MIGRATION_DELETE(fileName));
+    } else {
+      query.push(this.QUERY_MIGRATION_INSERT(fileName));
+    }
+
+    await queryHandler(query);
   }
 }
